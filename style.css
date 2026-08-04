@@ -5,9 +5,14 @@ box-sizing:border-box;
 font-family:Arial;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#f4f4f4;
 color:#333;
+transition:background 0.3s, color 0.3s;
 }
 
 header{
@@ -20,9 +25,17 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 flex-wrap:wrap;
+position:relative;
 }
 
 nav h2{
+color:white;
+}
+
+.menu{
+display:none;
+font-size:30px;
+cursor:pointer;
 color:white;
 }
 
@@ -103,14 +116,141 @@ text-align:center;
 padding:20px;
 }
 
+/* ===== DARK MODE TOGGLE ===== */
+/* Assumes JS does: document.body.classList.toggle('dark-mode') */
+body.dark-mode{
+background:#121212;
+color:#e0e0e0;
+}
+
+body.dark-mode header,
+body.dark-mode footer{
+background:#000;
+}
+
+body.dark-mode .hero{
+background:#1a1a1a;
+}
+
+body.dark-mode .btn{
+background:#3399ff;
+}
+
+body.dark-mode .skill-box div{
+background:#3399ff;
+}
+
+/* Optional toggle icon/button styling, if you have one like <span class="mode-toggle"> */
+.mode-toggle{
+cursor:pointer;
+color:white;
+font-size:22px;
+margin-left:20px;
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+/* Assumes JS (IntersectionObserver) adds class 'show' when element enters viewport */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ===== CONTACT FORM + VALIDATION ===== */
+/* Assumes form fields are wrapped like <input class="form-input"> */
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+margin:0 auto;
+text-align:left;
+}
+
+.form-input,
+.form-textarea{
+padding:12px;
+border:2px solid #ccc;
+border-radius:6px;
+font-size:16px;
+outline:none;
+transition:border-color 0.3s;
+}
+
+.form-textarea{
+resize:vertical;
+min-height:120px;
+}
+
+.form-input:focus,
+.form-textarea:focus{
+border-color:#007bff;
+}
+
+/* Assumes JS adds class 'invalid' / 'valid' on validation */
+.form-input.invalid,
+.form-textarea.invalid{
+border-color:#e74c3c;
+}
+
+.form-input.valid,
+.form-textarea.valid{
+border-color:#2ecc71;
+}
+
+.error-message{
+color:#e74c3c;
+font-size:13px;
+display:none;
+}
+
+.error-message.show{
+display:block;
+}
+
+.form-success{
+color:#2ecc71;
+font-weight:bold;
+display:none;
+}
+
+.form-success.show{
+display:block;
+}
+
 @media (max-width:768px){
 
+.menu{
+display:block;
+}
+
 nav{
-flex-direction:column;
+flex-direction:row;
 }
 
 nav ul{
-margin-top:15px;
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#222;
+flex-direction:column;
+padding:20px;
+}
+
+nav ul.show{
+display:flex;
+}
+
+nav ul li{
+margin:15px 0;
+text-align:center;
 }
 
 .hero h1{
@@ -139,15 +279,6 @@ font-size:26px;
 
 .hero p{
 font-size:18px;
-}
-
-nav ul{
-flex-direction:column;
-align-items:center;
-}
-
-nav ul li{
-margin:10px 0;
 }
 
 .skill-box{
