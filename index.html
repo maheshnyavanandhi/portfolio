@@ -1,98 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahesh Portfolio</title>
 
-<title>Mahesh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
 
-<nav>
+    <nav>
 
-<h2>Mahesh</h2>
+        <h2 class="logo">Mahesh</h2>
 
-<ul>
+        <div class="menu" id="menuBtn">
+            ☰
+        </div>
 
-<li><a href="#home">Home</a></li>
+        <ul id="navLinks">
 
-<li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li>
 
-<li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
 
-<li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
 
-</ul>
+            <li><a href="#contact">Contact</a></li>
 
-</nav>
+        </ul>
+
+        <!-- Dark Mode Button -->
+        <button id="themeBtn">🌙</button>
+
+    </nav>
 
 </header>
 
-<section id="home" class="hero">
+<!-- Hero Section -->
 
-<img src="images/profile.jpeg">
+<section id="home" class="hero hidden">
 
-<h1>Hello, I'm Mahesh</h1>
+    <img src="images/profile.jpeg" alt="Mahesh">
 
-<p>B.Tech CSE Student</p>
+    <h1>Hello, I'm Mahesh</h1>
 
-<a href="#contact" class="btn">Contact Me</a>
+    <p>B.Tech Computer Science Engineering Student</p>
+
+    <a href="#contact" class="btn">
+        Contact Me
+    </a>
 
 </section>
 
-<section id="about">
+<!-- About -->
+
+<section id="about" class="hidden">
+
     <h2>About Me</h2>
 
     <p>
-        I'm Mahesh, a Computer Science Engineering student passionate about Web Development, AI and Cyber Security.
+        I'm Mahesh, a Computer Science Engineering student passionate about
+        Web Development, Artificial Intelligence and Cyber Security.
+        I enjoy solving coding problems and continuously learning
+        new technologies.
     </p>
-</section>
 
 </section>
 
-<section id="skills">
+<!-- Skills -->
 
-<h2>Skills</h2>
+<section id="skills" class="hidden">
 
-<div class="skill-box">
+    <h2>Skills</h2>
 
-<div>HTML</div>
+    <div class="skill-box">
 
-<div>CSS</div>
+        <div>HTML</div>
 
-<div>C++</div>
+        <div>CSS</div>
 
-<div>Java</div>
+        <div>JavaScript</div>
 
-<div>Python</div>
+        <div>C++</div>
 
-<div>SQL</div>
+        <div>Java</div>
 
-</div>
+        <div>Python</div>
+
+        <div>SQL</div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="hidden">
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Your Name">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Your Email">
+
+        <textarea
+            id="message"
+            rows="6"
+            placeholder="Enter Your Message"></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+
+    <div class="social">
+
+        <a href="https://github.com/" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://linkedin.com/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:mahesh@example.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </div>
 
 </section>
 
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email : mahesh@example.com</p>
-
-<p>Phone : +91 XXXXXXXXXX</p>
-
-</section>
+<!-- Footer -->
 
 <footer>
 
-<p>© 2026 Mahesh Portfolio</p>
+    <p>
+        © 2026 Mahesh Portfolio | Designed by Mahesh
+    </p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
