@@ -1,162 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesh Portfolio</title>
+    <title>Mahesh | Portfolio</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
 <header>
-
     <nav>
-
-        <h2 class="logo">Mahesh</h2>
+        <h2 class="logo">Mahesh<span>.</span></h2>
 
         <div class="menu" id="menuBtn">
             ☰
         </div>
 
         <ul id="navLinks">
-
             <li><a href="#home">Home</a></li>
-
             <li><a href="#about">About</a></li>
-
             <li><a href="#skills">Skills</a></li>
-
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
 
-        <!-- Dark Mode Button -->
-        <button id="themeBtn">🌙</button>
-
+        <button id="themeBtn" aria-label="Toggle theme">🌙</button>
     </nav>
-
 </header>
 
 <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <img src="images/profile.jpeg" alt="Mahesh">
+        <span class="badge">Welcome to my portfolio</span>
+        <h1>Hello, I'm <span class="highlight">Mahesh</span></h1>
+        <p class="subtitle">B.Tech Computer Science Engineering Student</p>
 
-<section id="home" class="hero hidden">
-
-    <img src="images/profile.jpeg" alt="Mahesh">
-
-    <h1>Hello, I'm Mahesh</h1>
-
-    <p>B.Tech Computer Science Engineering Student</p>
-
-    <a href="#contact" class="btn">
-        Contact Me
-    </a>
-
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+                Contact Me <i class="fas fa-paper-plane"></i>
+            </a>
+            <a href="resume.pdf" class="btn btn-secondary" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+        </div>
+    </div>
 </section>
 
-<!-- About -->
-
-<section id="about" class="hidden">
-
-    <h2>About Me</h2>
-
-    <p>
-        I'm Mahesh, a Computer Science Engineering student passionate about
-        Web Development, Artificial Intelligence and Cyber Security.
-        I enjoy solving coding problems and continuously learning
-        new technologies.
-    </p>
-
+<!-- About Section -->
+<section id="about" class="container">
+    <div class="section-header">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+    </div>
+    
+    <div class="about-card">
+        <p>
+            I'm <strong>Mahesh</strong>, a Computer Science Engineering student passionate about crafting clean web applications, exploring Artificial Intelligence, and understanding Cyber Security dynamics. I strive to build intuitive digital experiences, solve complex logic problems, and continuously master emerging technical frameworks.
+        </p>
+    </div>
 </section>
 
-<!-- Skills -->
-
-<section id="skills" class="hidden">
-
-    <h2>Skills</h2>
+<!-- Skills Section -->
+<section id="skills" class="container">
+    <div class="section-header">
+        <h2>Technical Skills</h2>
+        <div class="underline"></div>
+    </div>
 
     <div class="skill-box">
-
-        <div>HTML</div>
-
-        <div>CSS</div>
-
-        <div>JavaScript</div>
-
-        <div>C++</div>
-
-        <div>Java</div>
-
-        <div>Python</div>
-
-        <div>SQL</div>
-
+        <div class="skill-tag"><i class="fab fa-html5"></i> HTML</div>
+        <div class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+        <div class="skill-tag"><i class="fas fa-code"></i> C++</div>
+        <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
+        <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+        <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
     </div>
-
 </section>
 
-<!-- Contact -->
-
-<section id="contact" class="hidden">
-
-    <h2>Contact Me</h2>
-
-    <form id="contactForm">
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Enter Your Name">
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Enter Your Email">
-
-        <textarea
-            id="message"
-            rows="6"
-            placeholder="Enter Your Message"></textarea>
-
-        <button type="submit">
-            Send Message
-        </button>
-
-    </form>
-
-    <p id="error"></p>
-
-    <div class="social">
-
-        <a href="https://github.com/" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-
-        <a href="https://linkedin.com/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-
-        <a href="mailto:mahesh@example.com">
-            <i class="fas fa-envelope"></i>
-        </a>
-
+<!-- Projects Section -->
+<section id="projects" class="container">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <div class="underline"></div>
     </div>
 
+    <div class="projects-container">
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="images/project1.jpg" alt="Portfolio Project">
+            </div>
+            <div class="project-info">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A fully responsive modern personal portfolio website built using HTML5, CSS3, and JavaScript featuring theme switching and responsive layouts.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="btn-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="images/project2.jpg" alt="Weather App">
+            </div>
+            <div class="project-info">
+                <h3>Weather App</h3>
+                <p>
+                    Interactive weather forecasting application utilizing real-time API integrations, location searching, dynamic icons, and modern responsive UI components.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="btn-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img-wrapper">
+                <img src="images/project3.jpg" alt="To Do App">
+            </div>
+            <div class="project-info">
+                <h3>To Do Application</h3>
+                <p>
+                    Feature-rich task management app with local storage persistence, complete/delete task state tracking, filter functionality, and adaptive styling.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/" target="_blank" class="btn-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" target="_blank" class="btn-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="container">
+    <div class="section-header">
+        <h2>Education</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="education-card">
+        <div class="edu-header">
+            <h3>Bachelor of Technology (B.Tech)</h3>
+            <span class="edu-duration">2023 - 2027</span>
+        </div>
+        <h4>Computer Science and Engineering</h4>
+        <div class="edu-details">
+            <p><i class="fas fa-university"></i> <strong>College:</strong> Your College Name</p>
+            <p><i class="fas fa-graduation-cap"></i> <strong>University:</strong> Your University Name</p>
+            <p><i class="fas fa-star"></i> <strong>CGPA:</strong> 8.5 / 10</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <div class="section-header">
+        <h2>Get In Touch</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="contact-wrapper">
+        <form id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            <p id="error" class="form-status"></p>
+        </form>
+
+        <div class="social-links">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:mahesh@example.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
 </section>
 
 <!-- Footer -->
-
 <footer>
-
-    <p>
-        © 2026 Mahesh Portfolio | Designed by Mahesh
-    </p>
-
+    <p>© 2026 Mahesh Portfolio | Designed & Built by Mahesh</p>
 </footer>
 
 <script src="script.js"></script>
